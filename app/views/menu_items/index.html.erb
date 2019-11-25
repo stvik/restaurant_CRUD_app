@@ -1,0 +1,12 @@
+<h1>Menu Items</h1>
+
+
+<%@menu_items.each do |m| %>
+	<div><%= link_to m.name, menu_item_path(m) %>
+<% end %>
+
+
+<br>
+<br>
+
+<%= button_to "Create new item", new_menu_item_path, method: "get" %>

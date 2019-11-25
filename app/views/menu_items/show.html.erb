@@ -1,0 +1,8 @@
+<h1><%= @menu_item.name %></h1>
+
+<h2>Price: $<%=@menu_item.price %></h2>
+
+<%= button_to "Edit", edit_menu_item_path, method:"get" %>
+<%= button_to "Delete", @menu_item, method: :delete %>
+<br>
+<%= button_to "View all Menu Items", menu_items_path, method: "get" %>
