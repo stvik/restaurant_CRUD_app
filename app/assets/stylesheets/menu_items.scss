@@ -1,3 +1,29 @@
 // Place all the styles related to the MenuItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: purple;
+  text-align: center;
+  background-image: URL("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxXFb02-WxbiAh1BgyskGfEtgWoRyp-EZ_ecH1dmFm74dx8Lj&s");
+  background-size: cover;
+}
+h1 {
+	font-size: 100px;
+}
+
+div {
+	text-align: center;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+a {
+
+}

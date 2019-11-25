@@ -1,10 +1,12 @@
 <h1>Customers</h1>
 
-<ul>
+
 	<% @customers.each do |customer| %>
-		<li><%= link_to customer.name, customer_path(customer) %></li>
+		<div><%= link_to customer.name, customer_path(customer) %></div>
 	<%end%>
+<br>
 
-</ul>
+<div><%= button_to "New", new_customer_path, method: "get" %></div>
 
-<%= button_to "New", new_customer_path, method: "get" %>
+<p><%= link_to "Home", home_path %></p>
+

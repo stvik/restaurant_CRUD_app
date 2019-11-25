@@ -2,6 +2,10 @@ class CustomersController < ApplicationController
 
 	before_action :find_customer, only: [:show, :edit, :update, :destroy]
 
+	def home
+
+	end
+
 	def index
 		@customers = Customer.all
 	end
@@ -26,9 +30,9 @@ class CustomersController < ApplicationController
 	end
 
 	def update
-		customer = Customer.update(customer_strong_params)
+		@customer.update(customer_strong_params)
 
-		redirect_to customer_path(customer)
+		redirect_to customer_path(@customer)
 	end
 
 	def destroy

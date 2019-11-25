@@ -18,8 +18,8 @@ class OrdersController < ApplicationController
     end
 
     def update
-        order = Order.update(order_strong_params)
-        redirect_to order_path(order)
+        @order.update(order_strong_params)
+        redirect_to order_path(@order)
     end
 
     def destroy

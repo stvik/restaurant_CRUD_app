@@ -25,9 +25,9 @@ class MenuItemsController < ApplicationController
 	end
 
 	def update
-		menu_item = MenuItem.update(menu_item_strong_params)
+		menu_item = @menu_item.update(menu_item_strong_params)
 
-		redirect_to menu_item_path(menu_item)
+		redirect_to menu_item_path(@menu_item)
 	end
 
 	def destroy
