@@ -1,6 +1,15 @@
 <h1> <%= @customer.name %> </h1>
 
-<h2> Gender: <%= @customer.gender %></h2>
+<h4> Gender: <%= @customer.gender %></h4>
+
+<%= button_to "Create New Order", new_order_path, method: 'get' %> 
+
+<h3> Orders: </h3>
+
+    <% @customer.orders.each do |order| %>
+    <div><%= link_to order.date_format, order_path(order) %></div>
+    <% end %>
+<br>
 
 <%= button_to "Edit", edit_customer_path, method: 'get' %>
 <%= button_to "Delete", @customer , method: :delete %>

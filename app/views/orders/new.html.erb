@@ -1,0 +1,7 @@
+<h1>Create Order</h1>
+
+<%= render partial: "order_form", locals: {submit_text: "Submit order"} %>
+<br>
+<br>
+<div>Don't see your name?</div>
+<%= button_to "Add Customer", new_customer_path, method: "get" %>

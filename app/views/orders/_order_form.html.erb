@@ -1,0 +1,7 @@
+<%= form_for @order do |f| %>
+<%= f.label :customer %>
+<%= f.collection_select(:customer_id, Customer.all, :id, :name) %><br><br>
+<%= f.label :menu_item %>
+<%= f.collection_select(:menu_item_id, MenuItem.all, :id, :name) %><br><br><br>
+<%= f.submit submit_text %>
+<% end %>

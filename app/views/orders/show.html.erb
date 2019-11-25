@@ -1,0 +1,7 @@
+<h1><%= @order.date_format %></h1>
+
+
+<h2>Customer's Name: <%= link_to @order.customer.name, customer_path(@order.customer) %></h2>
+<h2>Menu Item's Name: <%= link_to @order.menu_item.name, menu_item_path(@order.menu_item) %></h2>
+<h2>Order Total: $<%= @order.menu_item.price %></h2>
+<%= button_to "Edit Order", edit_order_path, method: 'get' %> 
